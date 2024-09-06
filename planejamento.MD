@@ -13,6 +13,5 @@ Mostar o saldo atual no final da listagem do extrato;
 
 3 saques diários com limite de R$500;
 
-Mensagem que informe impossibilidade de saque por;
-
+Mensagem que informe impossibilidade de saque por
 quantia insuficiente no saldo em conta.

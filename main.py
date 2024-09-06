@@ -1,7 +1,7 @@
-from funcoes import saque
+from funcoes import saque, funcao_saldo, extrato
 
 print("DEPÓSITO: [d]\nSAQUE:    [s]\nEXTRATO:  [e]\nSAIR:     [q]")
-saldo = 1000
+saldo = funcao_saldo(saldo=0)  # por padrão 0
 
 while True:
 
@@ -9,14 +9,23 @@ while True:
 
     match opcao:
         case "d":
-            print("Depósito")
+            print()
+            print("DEPÓSITO")
+            saldo = float(input("Digite o valor à ser depositado: R$"))
+            funcao_saldo(saldo)
+            print()
 
         case "s":
-            print("Saque")
-            print(saque(saldo))
+            print()
+            print("SAQUE")
+            print("Valor de máximo de saque: R$500.00")
+            print()
+            saldo = funcao_saldo(saque(saldo))
 
         case "e":
-            print("Extrato")
+            print()
+            print("EXTRATO")
+            extrato()
 
         case "q":
             print("Saindo do programa...")
